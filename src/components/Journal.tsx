@@ -50,7 +50,7 @@ const JOURNAL_ENTRIES: JournalEntry[] = [
     date: "Aug 2026",
     category: "High-Speed Inference",
     image:
-      "https://images.unsplash.com/photo-1614680376593-902f749f7ffc?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=400&q=80",
     excerpt:
       "Building Nexus: ultra-low latency WhatsApp conversational CRM using Groq's LPUs, Gmail alerts every 30 minutes, and SQLite lead storage.",
   },

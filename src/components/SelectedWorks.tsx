@@ -85,7 +85,7 @@ const PROJECTS: Project[] = [
     year: "2026",
     badge: "GROQ LPU • 1.4S INFERENCE",
     image:
-      "https://images.unsplash.com/photo-1614680376593-902f749f7ffc?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=1200&q=85",
     summary:
       "A high-speed WhatsApp AI agent replying to DMs and groups in under 2 seconds using Groq's LPU running Llama 3 70B. Qualifies leads, dispatches Gmail alerts to sales teams every 30 minutes, and synchronizes data with an embedded zero-latency SQLite CRM.",
     client: "Sales & Operations Automation",
