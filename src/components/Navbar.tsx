@@ -27,6 +27,9 @@ export const Navbar: React.FC<NavbarProps> = ({
     } else if (link === "Work") {
       const el = document.getElementById("work");
       if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else if (link === "Open Source") {
+      const el = document.getElementById("opensource");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
     } else if (link === "Writing") {
       const el = document.getElementById("journal");
       if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -74,9 +77,9 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* 2. Divider (hidden on mobile) */}
         <div className="w-px h-5 bg-stroke mx-1 hidden sm:block" />
 
-        {/* 3. Nav links: ["Home", "Work", "Writing", "Resume"] */}
+        {/* 3. Nav links: ["Home", "Work", "Open Source", "Writing", "Resume"] */}
         <div className="flex items-center gap-1">
-          {["Home", "Work", "Writing", "Resume"].map((link) => {
+          {["Home", "Work", "Open Source", "Writing", "Resume"].map((link) => {
             const isActive = activeSection === link;
             return (
               <button

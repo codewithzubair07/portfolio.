@@ -119,9 +119,8 @@ export const Hero: React.FC<HeroProps> = ({
           Md Juber Quraishi
         </h1>
 
-        {/* Role line: "A {role} based in Durgapur, India." */}
+        {/* Role line: "{role} based in Durgapur, India." */}
         <div className="blur-in text-base md:text-xl text-muted font-light mb-4 flex items-center justify-center gap-2 flex-wrap">
-          <span>A</span>
           <span
             key={roleIndex}
             className="font-display italic text-text-primary animate-role-fade-in inline-block text-lg md:text-2xl px-2.5 py-0.5 rounded-lg bg-surface/60 border border-white/10"
@@ -139,10 +138,17 @@ export const Hero: React.FC<HeroProps> = ({
 
         {/* Credibility Micro-Strip */}
         <div className="blur-in flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-8 text-[11px] md:text-xs text-text-primary/80 font-mono">
-          <span className="px-3 py-1 rounded-full bg-surface/60 border border-stroke backdrop-blur-sm flex items-center gap-1.5">
+          <button
+            onClick={() => {
+              const el = document.getElementById("opensource");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-3 py-1 rounded-full bg-surface/60 border border-stroke backdrop-blur-sm flex items-center gap-1.5 hover:border-text-primary/40 hover:bg-surface transition-all cursor-pointer"
+            title="View Open-Source Contributions"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-[#89AACC]" />
-            168 Merged PRs
-          </span>
+            <span>168 Merged PRs</span>
+          </button>
           <span className="px-3 py-1 rounded-full bg-surface/60 border border-stroke backdrop-blur-sm flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#4E85BF]" />
             Top 50 MLH AI Hackathon

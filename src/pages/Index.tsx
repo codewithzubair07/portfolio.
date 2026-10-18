@@ -4,6 +4,7 @@ import { LoadingScreen } from "../components/LoadingScreen";
 import { Navbar } from "../components/Navbar";
 import { Hero } from "../components/Hero";
 import { SelectedWorks } from "../components/SelectedWorks";
+import { OpenSourceContributor } from "../components/OpenSourceContributor";
 import { SkillsArsenal } from "../components/SkillsArsenal";
 import { Journal } from "../components/Journal";
 import { Explorations } from "../components/Explorations";
@@ -21,10 +22,13 @@ export const Index: React.FC = () => {
     const handleScroll = () => {
       const scrollPos = window.scrollY + 250;
       const journalEl = document.getElementById("journal");
+      const openSourceEl = document.getElementById("opensource");
       const workEl = document.getElementById("work");
 
       if (journalEl && scrollPos >= journalEl.offsetTop) {
         setActiveSection("Writing");
+      } else if (openSourceEl && scrollPos >= openSourceEl.offsetTop) {
+        setActiveSection("Open Source");
       } else if (workEl && scrollPos >= workEl.offsetTop) {
         setActiveSection("Work");
       } else {
@@ -69,7 +73,10 @@ export const Index: React.FC = () => {
         {/* Section 3: Selected Works */}
         <SelectedWorks />
 
-        {/* Section 3.5: Technical Skills & Arsenal */}
+        {/* Section 3.5: Open Source Contributions (168 PRs, 102 Repos, Bounties) */}
+        <OpenSourceContributor />
+
+        {/* Section 3.8: Technical Skills & Arsenal */}
         <SkillsArsenal />
 
         {/* Section 4: Journal */}
